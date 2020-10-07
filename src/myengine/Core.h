@@ -1,0 +1,5 @@
+struct Core
+{
+	void dummy();
+};
+
