@@ -22,18 +22,19 @@ add_definitions(-DSDL_MAIN_HANDLED)
 
 add_library(graphics
     src/graphics/graphics.h
-    src/graphics/Light.cpp
     src/graphics/Light.h
+	src/graphics/Model.h
+	src/graphics/ShaderProgram.h
+	src/graphics/Texture.h
+	src/graphics/VertexArray.h
+	src/graphics/VertexBuffer.h
+	
+    src/graphics/Light.cpp
     src/graphics/Model.cpp
-    src/graphics/Model.h
     src/graphics/ShaderProgram.cpp
-    src/graphics/ShaderProgram.h
     src/graphics/Texture.cpp
-    src/graphics/Texture.h
     src/graphics/VertexArray.cpp
-    src/graphics/VertexArray.h
     src/graphics/VertexBuffer.cpp
-    src/graphics/VertexBuffer.h
 )
 
 if(MSVC OR MINGW)
