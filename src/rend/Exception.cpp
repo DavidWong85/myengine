@@ -2,7 +2,7 @@
 
 #include <GL/glew.h>
 
-#include <iostream>
+//#include <iostream>
 
 namespace rend
 {

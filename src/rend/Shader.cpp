@@ -7,6 +7,8 @@
 #include "TextureAdapter.h"
 #include "Mesh.h"
 
+#include <iostream>
+
 #include <vector>
 
 #include <array>
@@ -310,7 +312,7 @@ void Shader::parse(const std::string& source)
   cache.clear();
 
   std::string vertSrc = "";
-  vertSrc += "#version 120\n";
+  /*vertSrc += "#version 120\n";*/
   vertSrc += "#define VERTEX\n";
   vertSrc += source;
   src = vertSrc.c_str();
@@ -341,11 +343,12 @@ void Shader::parse(const std::string& source)
     pollForError();
 
     std::string msg = &infoLog.at(0);
+	std::cout << msg << std::endl;
     throw Exception(msg);
   }
 
   std::string fragSrc = "";
-  fragSrc += "#version 120\n";
+  /*fragSrc += "#version 120\n";*/
   fragSrc += "#define FRAGMENT\n";
   fragSrc += source;
   src = fragSrc.c_str();
@@ -376,6 +379,7 @@ void Shader::parse(const std::string& source)
     pollForError();
 
     std::string msg = &infoLog.at(0);
+	std::cout << msg << std::endl;
     throw Exception(msg);
   }
 
@@ -402,6 +406,7 @@ void Shader::parse(const std::string& source)
     pollForError();
 
     std::string msg = &infoLog.at(0);
+	std::cout << msg << std::endl;
     throw Exception(msg);
   }
 

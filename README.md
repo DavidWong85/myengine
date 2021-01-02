@@ -1,2 +1,0 @@
-# myengine
-A game engine
