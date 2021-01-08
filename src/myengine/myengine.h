@@ -7,6 +7,7 @@
 #include "Renderer.h"
 #include "Transform.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 #include "Camera.h"
 #include "Resource.h"
 #include "Resources.h"
@@ -14,6 +15,7 @@
 #include "Texture.h"
 #include "Sound.h"
 #include "SoundSource.h"
+#include "Listener.h"
 
 using namespace myengine;
 

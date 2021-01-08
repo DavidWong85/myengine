@@ -4,12 +4,10 @@ namespace myengine
 {
 	Resource::~Resource()
 	{
-
 	}
 
 	void Resource::onLoad(const std::string& path) 
 	{
-
 	}
 
 	void Resource::setPath(std::string path)

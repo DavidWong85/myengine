@@ -12,9 +12,14 @@ namespace myengine
 		glm::mat4 getView();
 		glm::mat4 getProjection();
 
+		void setAngle(float _angle);
+		void setRotation(float _rotation);
+
 	private:
-		float fov = 45.0f;
+		float fov = 60.0f;
 		int camWidth = 1280;
 		int camHeight = 720;
+		float angle = 0;
+		float rotation = 0;
 	};
 }

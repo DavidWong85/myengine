@@ -10,6 +10,7 @@ namespace myengine {
 
 	struct Entity;
 	struct Keyboard;
+	struct Mouse;
 	struct Camera;
 	struct Resources;
 	struct Sound;
@@ -22,12 +23,15 @@ namespace myengine {
 		static std::shared_ptr<Core> initialize();
 		std::shared_ptr<Entity> addEntity();
 		std::shared_ptr<Keyboard> getKeyboard();
+		std::shared_ptr<Mouse> getMouse();
 		std::shared_ptr<Camera> getCamera();
 		std::shared_ptr<Resources> getResources();
 
 		void start();
 		
 		static void loop();
+
+		float getDeltaT();
 
 		//Destructor:
 		//alcMakeContextCUrrent(NULL);
@@ -44,9 +48,11 @@ namespace myengine {
 		std::vector<std::shared_ptr<Entity>> entities;
 		std::weak_ptr<Core> self;
 		std::shared_ptr<Keyboard> keyboard;
+		std::shared_ptr<Mouse> mouse;
 		std::weak_ptr<Camera> camera;
 		std::shared_ptr<Resources> resources;
 
+		float deltaTime;
 		float lastTime;
 	};
 }

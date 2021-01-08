@@ -9,8 +9,9 @@ namespace myengine
 		void onInitialize();
 		glm::mat4 getModel();
 		void setPosition(glm::vec3 _position);
-		//void translate(glm::vec3 _translation);
 		void translate(float x, float y, float z);
+		glm::vec3 getPosition();
+		
 
 	private:
 		glm::vec3 position;

@@ -52,6 +52,7 @@ add_library(myengine
    src/myengine/Exception.h
    src/myengine/Renderer.h
    src/myengine/Keyboard.h
+   src/myengine/Mouse.h
    src/myengine/Camera.h
    src/myengine/Resource.h
    src/myengine/Resources.h
@@ -59,6 +60,7 @@ add_library(myengine
    src/myengine/Texture.h
    src/myengine/Sound.h
    src/myengine/SoundSource.h
+   src/myengine/Listener.h
 
    src/myengine/Core.cpp
    src/myengine/Entity.cpp
@@ -67,13 +69,16 @@ add_library(myengine
    src/myengine/Exception.cpp
    src/myengine/Renderer.cpp
    src/myengine/Keyboard.cpp
+   src/myengine/Mouse.cpp
    src/myengine/Camera.cpp
    src/myengine/Resource.cpp
    src/myengine/Model.cpp
    src/myengine/Texture.cpp
    src/myengine/Sound.cpp
    src/myengine/SoundSource.cpp
+   src/myengine/Listener.cpp
 )
+
 if(MSVC OR MINGW)
 target_link_libraries(myengine graphics SDL2 openal32)
 else()
@@ -81,9 +86,14 @@ target_link_libraries(myengine graphics SDL2 AL)
 endif()
 
 add_executable(demo
-    src/demo/main.cpp
     src/demo/CameraController.h
+    src/demo/player.h
+    src/demo/Room.h
+
+    src/demo/main.cpp
     src/demo/CameraController.cpp
+    src/demo/player.cpp
+    src/demo/Room.cpp
 )
 
 target_link_libraries(demo myengine)

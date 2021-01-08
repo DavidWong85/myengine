@@ -16,11 +16,26 @@ namespace myengine
 
 	glm::mat4 Camera::getView()
 	{
-		return glm::inverse(getTransform()->getModel());
+		glm::mat4 view = glm::mat4(1.0f);
+		view = glm::translate(view, getEntity()->getTransform()->getPosition());
+		view = glm::rotate(view, glm::radians(rotation), glm::vec3(0, 1, 0));
+		view = glm::rotate(view, glm::radians(angle / 2), glm::vec3(1, 0, 0));
+
+		return glm::inverse(view);
 	}
 
 	glm::mat4 Camera::getProjection()
 	{
 		return glm::perspective(glm::radians(fov), (float)camWidth / (float)camHeight, 0.1f, 100.0f);
+	}
+
+	void Camera::setAngle(float _angle)
+	{
+		angle = _angle;
+	}
+
+	void Camera::setRotation(float _rotation)
+	{
+		rotation = _rotation;
 	}
 }

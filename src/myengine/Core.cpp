@@ -3,6 +3,7 @@
 #include "Exception.h"
 #include "Transform.h"
 #include "Keyboard.h"
+#include "Mouse.h"
 #include "Resources.h"
 
 #include <iostream>
@@ -28,6 +29,8 @@ namespace myengine
 		{
 			throw Exception("Failed to create window");
 		}
+
+		SDL_ShowCursor(0);
 
 		rtn->glContext = SDL_GL_CreateContext(rtn->window);
 
@@ -61,6 +64,7 @@ namespace myengine
 		}
 
 		rtn->keyboard = std::make_shared<Keyboard>();
+		rtn->mouse = std::make_shared<Mouse>();
 		rtn->resources = std::make_shared<Resources>();
 
 		_core = rtn;
@@ -86,6 +90,11 @@ namespace myengine
 	std::shared_ptr<Keyboard> Core::getKeyboard()
 	{
 		return keyboard;
+	}
+
+	std::shared_ptr<Mouse> Core::getMouse()
+	{
+		return mouse;
 	}
 
 	std::shared_ptr<Resources> Core::getResources()
@@ -119,6 +128,12 @@ namespace myengine
 		SDL_Event e = { 0 };
 		std::shared_ptr<Core> c = _core.lock();
 
+		float now = SDL_GetTicks();
+		c->deltaTime = (now - c->lastTime) / 1000.0f;
+		c->lastTime = now;
+
+		SDL_WarpMouseInWindow(c->window, 1280 / 2, 720 / 2);
+
 		while (SDL_PollEvent(&e) != 0) 
 		{ 
 			if (e.type == SDL_QUIT) 
@@ -146,6 +161,10 @@ namespace myengine
 				}
 				c->keyboard->upKeys.push_back(e.key.keysym.sym);
 			}
+			else if (e.type == SDL_MOUSEMOTION)
+			{
+				c->mouse->setMousePosition(e.motion.x, e.motion.y);
+			}
 		}
 
 		for (size_t ei = 0; ei < c->entities.size(); ei++) 
@@ -172,10 +191,18 @@ namespace myengine
 
 		//For 2D UI, disable GL_DEPTH_TEST , then use another render function specific for 2D 
 
+		//std::cout << "Delta Time : " << c->deltaTime << std::endl;
+
 		SDL_GL_SwapWindow(c->window); 
 
 		c->keyboard->downKeys.clear();
 		c->keyboard->upKeys.clear();
+
+	}
+
+	float Core::getDeltaT()
+	{
+		return deltaTime;
 	}
 }
 

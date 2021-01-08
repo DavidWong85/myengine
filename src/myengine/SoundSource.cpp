@@ -7,9 +7,10 @@ namespace myengine
 	{
 		alGenSources(1, &sid);
 		//alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
-		//alSource3f(sid, AL_POSITION, 0.0f, 0.0f, 0.0f);
+		alSource3f(sid, AL_POSITION, 0.0f, 0.0f, 0.0f);
 		float newVolume = 0.1f;
 		alSourcef(sid, AL_GAIN, newVolume);
+		alSourcei(sid, AL_LOOPING, AL_TRUE);
 		alSourcei(sid, AL_BUFFER, sound->id);
 		alSourcePlay(sid);
 	}
