@@ -132,8 +132,6 @@ namespace myengine
 		c->deltaTime = (now - c->lastTime) / 1000.0f;
 		c->lastTime = now;
 
-		SDL_WarpMouseInWindow(c->window, 1280 / 2, 720 / 2);
-
 		while (SDL_PollEvent(&e) != 0) 
 		{ 
 			if (e.type == SDL_QUIT) 
@@ -167,6 +165,8 @@ namespace myengine
 			}
 		}
 
+		SDL_WarpMouseInWindow(c->window, 1280 / 2, 720 / 2);
+
 		for (size_t ei = 0; ei < c->entities.size(); ei++) 
 		{
 			c->entities.at(ei)->tick(); 
@@ -185,7 +185,8 @@ namespace myengine
 		{
 			if (c->entities.at(ei)->alive == false)
 			{
-
+				c->entities.erase(c->entities.begin() + ei);
+				ei--;
 			}
 		}
 
@@ -197,7 +198,6 @@ namespace myengine
 
 		c->keyboard->downKeys.clear();
 		c->keyboard->upKeys.clear();
-
 	}
 
 	float Core::getDeltaT()

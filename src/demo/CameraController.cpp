@@ -55,9 +55,9 @@ glm::vec3 CameraController::Move(float _deltaTime, float _rotation, glm::vec3 _p
 	glm::vec4 tmp = model * glm::vec4(_direction, 1);
 	_position += glm::vec3(tmp * speed * _deltaTime);
 
-	std::cout << "Temp : " << temp.x << " " << temp.y << " " << temp.z << std::endl;
-	std::cout << "Delta Time : " << _deltaTime << std::endl;
-	std::cout << "Posision : " << _position.x << " " << _position.y << " " << _position.z << "\n" << std::endl;
+	//std::cout << "Temp : " << temp.x << " " << temp.y << " " << temp.z << std::endl;
+	//std::cout << "Delta Time : " << _deltaTime << std::endl;
+	//std::cout << "Posision : " << _position.x << " " << _position.y << " " << _position.z << "\n" << std::endl;
 
 	return _position;
 }

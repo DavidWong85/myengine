@@ -15,6 +15,9 @@ namespace myengine
 		void setAngle(float _angle);
 		void setRotation(float _rotation);
 
+		float getAngle();
+		float getRotation();
+
 	private:
 		float fov = 60.0f;
 		int camWidth = 1280;

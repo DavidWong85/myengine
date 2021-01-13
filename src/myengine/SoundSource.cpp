@@ -1,14 +1,19 @@
 #include "SoundSource.h"
+
 #include "Sound.h"
+#include "Entity.h"
+#include "Transform.h"
+
+#include <iostream>
 
 namespace myengine
 {
 	void SoundSource::onInitialize(std::shared_ptr<Sound> sound)
 	{
 		alGenSources(1, &sid);
-		//alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
-		alSource3f(sid, AL_POSITION, 0.0f, 0.0f, 0.0f);
-		float newVolume = 0.1f;
+		position = getEntity()->getTransform()->getPosition();
+		alSource3f(sid, AL_POSITION, position.x, position.y, position.z);
+		float newVolume = 1.0f;
 		alSourcef(sid, AL_GAIN, newVolume);
 		alSourcei(sid, AL_LOOPING, AL_TRUE);
 		alSourcei(sid, AL_BUFFER, sound->id);
@@ -18,6 +23,8 @@ namespace myengine
 	void SoundSource::onTick()
 	{
 		ALint state = 0;
+
+		setPosition(getEntity()->getTransform()->getPosition());
 
 		alGetSourcei(sid, AL_SOURCE_STATE, &state);
 
@@ -30,5 +37,10 @@ namespace myengine
 	void SoundSource::onDestroy()
 	{
 		alDeleteSources(1, &sid);
+	}
+
+	void SoundSource::setPosition(glm::vec3 _position)
+	{
+		position = _position;
 	}
 }

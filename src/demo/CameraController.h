@@ -9,7 +9,7 @@ struct CameraController : public Component
 private:
 	float angle = 0;
 	float rotation = 0;
-	float sensitivity = 0.08;
+	float sensitivity = 0.06;
 	float speed = 5.0f;
 
 	glm::vec3 temp = glm::vec3(0, 0, 0);

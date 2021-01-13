@@ -29,7 +29,7 @@ int main() {
 	std::shared_ptr<Entity> entity = core->addEntity();
 	entity->getTransform()->setPosition(glm::vec3(0, 0, 10));
 	std::shared_ptr<Player> cat = entity->addComponent<Player>();
-	std::shared_ptr<SoundSource> ss = entity->addComponent<SoundSource>(core->getResources()->load<Sound>("../resources/test"));
+	std::shared_ptr<SoundSource> ss = entity->addComponent<SoundSource>(core->getResources()->load<Sound>("../resources/dixie_horn"));
 	std::shared_ptr<Killer> killer = entity->addComponent<Killer>();
 
 	std::shared_ptr<Entity> re = core->addEntity();

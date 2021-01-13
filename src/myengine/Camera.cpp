@@ -38,4 +38,14 @@ namespace myengine
 	{
 		rotation = _rotation;
 	}
+
+	float Camera::getAngle()
+	{
+		return angle;
+	}
+
+	float Camera::getRotation()
+	{
+		return rotation;
+	}
 }

@@ -14,10 +14,15 @@ namespace myengine
 
 		void onTick();
 
-		void setPosition(glm::vec3 _position);
+		void setAngle(float _angle);
+		void setRotation(float _rotation);
 
 	private:
 		ALuint sid;
 		glm::vec3 position;
+		glm::vec3 foward;
+		glm::vec3 up;
+		float angle;
+		float rotation;
 	};
 }
