@@ -69,6 +69,8 @@ namespace myengine {
 		std::weak_ptr<Camera> camera;
 		std::shared_ptr<Resources> resources;
 
+		bool running = true;
+
 		float deltaTime;
 		float lastTime;
 	};
