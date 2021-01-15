@@ -4,9 +4,19 @@ namespace myengine
 {
 	struct Mouse
 	{
-		 void setMousePosition(float _x, float _y);
-		 int mouseHorizontal(float _width);
-		 int mouseVertical(float _height);
+		/**
+		* set mouse position
+		*/
+		void setMousePosition(float _x, float _y);
+		/**
+		* return horizontal offset 
+		*/
+		int mouseHorizontal(float _width);
+		/**
+		* return vertical offset
+		*/
+		int mouseVertical(float _height);
+
 	private:
 		glm::vec2 MousePosition;
 	};

@@ -12,6 +12,9 @@ namespace myengine
 	struct Model : public Resource
 	{
 		friend struct Renderer;
+		/**
+		* set mesh
+		*/
 		void onLoad(const std::string path);
 
 	private:

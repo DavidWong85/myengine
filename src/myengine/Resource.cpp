@@ -2,10 +2,6 @@
 
 namespace myengine
 {
-	Resource::~Resource()
-	{
-	}
-
 	void Resource::onLoad(const std::string& path) 
 	{
 	}

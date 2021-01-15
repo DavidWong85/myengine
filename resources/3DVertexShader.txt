@@ -1,0 +1,21 @@
+"attribute vec3 a_Position;                                             \n " \
+"attribute vec2 a_TexCoord;                                             \n " \
+"attribute vec3 a_Normal;                                               \n " \
+"                                                                       \n " \
+"uniform mat4 u_Projection;                                             \n " \
+"uniform mat4 u_View;                                                   \n " \
+"uniform mat4 u_Model;                                                  \n " \
+"                                                                       \n " \
+"varying vec2 v_TexCoord;                                               \n " \
+"varying vec3 v_Normal;                                                 \n " \
+"varying vec3 v_viewPos;                                                \n " \
+"varying vec3 v_FragPos;                                                \n " \
+"                                                                       \n " \
+"void main()                                                            \n " \
+"{                                                                      \n " \
+"gl_Position = u_Projection * u_View * u_Model * vec4(a_Position, 1.0); \n " \
+"v_viewPos = vec3(gl_Position);                                         \n " \
+"v_TexCoord = a_TexCoord;                                               \n " \
+"v_Normal = a_Normal;                                                   \n " \
+"v_FragPos = vec3(u_Model * vec4(a_Position, 1.0));                     \n " \
+"}                                                                      \n ";

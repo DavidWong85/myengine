@@ -14,8 +14,8 @@ if(MSVC)
     )
 else()
     set(CMAKE_EXECUTABLE_SUFFIX ".html")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL=2 -s DISABLE_EXCEPTION_CATCHING=0")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s DISABLE_EXCEPTION_CATCHING=0")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s USE_SDL=2 -s DISABLE_EXCEPTION_CATCHING=0 -s ALLOW_MEMORY_GROWTH=1")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s DISABLE_EXCEPTION_CATCHING=0 --preload-file ../resources -s ALLOW_MEMORY_GROWTH=1")
 endif()
 
 add_definitions(-DSDL_MAIN_HANDLED)
@@ -87,12 +87,12 @@ endif()
 
 add_executable(demo
     src/demo/CameraController.h
-    src/demo/player.h
+    src/demo/Cat.h
     src/demo/Room.h
-
+    
     src/demo/main.cpp
     src/demo/CameraController.cpp
-    src/demo/player.cpp
+    src/demo/Cat.cpp
     src/demo/Room.cpp
 )
 

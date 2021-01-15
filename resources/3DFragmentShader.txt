@@ -1,0 +1,40 @@
+"#ifdef GL_ES                                               \n" \
+"precision mediump float;                                   \n" \
+"#endif                                                     \n" \
+"                                                           \n" \
+"uniform sampler2D u_Texture;                               \n" \
+"                                                           \n" \
+"uniform float ambientStrength;                             \n" \
+"uniform vec3 lightColor;                                   \n" \
+"uniform vec3 lightPos;                                     \n" \
+"uniform float specularStrength;                            \n" \
+"                                                           \n" \
+"varying vec2 v_TexCoord;                                   \n" \
+"varying vec3 v_Normal;                                     \n" \
+"varying vec3 v_FragPos;                                    \n" \
+"varying vec3 v_viewPos;                                    \n" \
+"                                                           \n" \
+"void main()                                                \n" \
+"{                                                          \n" \
+"vec3 ambient = ambientStrength * lightColor;               \n" \
+"                                                           \n" \
+"vec3 norm = normalize(v_Normal);                           \n" \
+"vec3 lightDir = normalize(lightPos - v_FragPos);           \n" \
+"                                                           \n" \
+"float diff = max(dot(norm, lightDir), 0.0);                \n" \
+"vec3 diffuse = diff * lightColor;                          \n" \
+"                                                           \n" \
+"vec3 viewDir = normalize(v_viewPos - v_FragPos);           \n" \
+"vec3 reflectDir = reflect(-lightDir, norm);                \n" \
+"float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0);\n" \
+"vec3 specular = specularStrength * spec * lightColor;      \n" \
+"                                                           \n" \
+"vec3 Maxv3 = vec3(1, 1, 1);                                \n" \
+"vec3 Minv3 = vec3(0, 0, 0);                                \n" \
+"vec3 light = vec3(ambient + diffuse + specular);           \n" \
+"light = max(min(light, Maxv3), Minv3);                     \n" \
+"                                                           \n" \
+"vec4 tex = texture2D(u_Texture, v_TexCoord);               \n" \
+"                                                           \n" \
+"gl_FragColor = tex;                                        \n" \
+"}                                                          \n";

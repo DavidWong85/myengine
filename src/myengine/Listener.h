@@ -10,15 +10,16 @@ namespace myengine
 	struct Sound;
 	struct Listener : public Component
 	{
+		/**
+		* set listener position
+		*/
 		void onInitialize();
-
+		/**
+		* update listener position and orientation 
+		*/
 		void onTick();
 
-		void setAngle(float _angle);
-		void setRotation(float _rotation);
-
 	private:
-		ALuint sid;
 		glm::vec3 position;
 		glm::vec3 foward;
 		glm::vec3 up;

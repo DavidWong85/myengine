@@ -6,16 +6,33 @@ namespace myengine
 {
 	struct Camera : public Component
 	{
+		/**
+		* set Camera in core
+		*/
 		void onInitialize();
-		//void onDestroy();
-
+		/**
+		* return view matrix
+		*/
 		glm::mat4 getView();
+		/**
+		* return projection matrix
+		*/
 		glm::mat4 getProjection();
-
+		/**
+		* set angle
+		*/
 		void setAngle(float _angle);
+		/**
+		* set rotation
+		*/
 		void setRotation(float _rotation);
-
+		/**
+		* get angle
+		*/
 		float getAngle();
+		/**
+		* get rotation
+		*/
 		float getRotation();
 
 	private:

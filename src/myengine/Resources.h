@@ -10,6 +10,9 @@ namespace myengine
 
 	struct Resources
 	{
+		/**
+		* add resource to vector if not already added previously
+		*/
 		template <typename T>
 		std::shared_ptr<T> load(const std::string& path)
 		{
@@ -28,8 +31,14 @@ namespace myengine
 				}
 			}
 			rtn = std::make_shared<T>();
+
+#ifdef EMSCRIPTEN
 			rtn->setPath(path);
 			rtn->onLoad(path);
+#else
+			rtn->setPath("../resources/" + path);
+			rtn->onLoad("../resources/" + path);
+#endif
 			resources.push_back(rtn);
 
 			return rtn;

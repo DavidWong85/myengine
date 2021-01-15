@@ -1,9 +1,9 @@
 #include <myengine/myengine.h>
 
-struct Room : public Component
+struct Cat : public Component
 {
 	/**
-	* set Room's model and texture
+	* set Cat's model and texture
 	*/
 	void onInitialize();
 };

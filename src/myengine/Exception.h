@@ -9,6 +9,9 @@ namespace myengine
 {
 	struct Exception : public std::exception
 	{
+		/**
+		* set message
+		*/
 		Exception(const std::string& message);
 		virtual ~Exception() throw();
 		virtual const char* what() const throw();

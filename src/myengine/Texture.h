@@ -12,6 +12,9 @@ namespace myengine
 	struct Texture : public Resource
 	{
 		friend struct Renderer;
+		/**
+		* set texture
+		*/
 		void onLoad(const std::string path);
 
 	private:

@@ -9,11 +9,18 @@ namespace myengine
 	struct Sound;
 	struct SoundSource : public Component
 	{
+		/**
+		* Initial openAL
+		*/
 		void onInitialize(std::shared_ptr<Sound> sound);
+		/**
+		* update position
+		*/
 		void onTick();
+		/**
+		* delete source
+		*/
 		void onDestroy();
-
-		void setPosition(glm::vec3 _position);
 
 	private:
 		ALuint sid;

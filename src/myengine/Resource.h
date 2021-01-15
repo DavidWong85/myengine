@@ -7,10 +7,14 @@ namespace myengine
 {
 	struct Resource
 	{
-		virtual ~Resource();
 		virtual void onLoad(const std::string& path);
-		//virtual void onCreate();
+		/**
+		* set path
+		*/
 		void setPath(std::string path);
+		/**
+		* return path
+		*/
 		std::string getPath();
 
 	private:

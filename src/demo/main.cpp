@@ -1,4 +1,4 @@
-#include "Player.h"
+#include "Cat.h"
 #include "Room.h"
 #include "CameraController.h"
 #include <myengine/myengine.h>
@@ -15,7 +15,6 @@ struct Killer : public Component
 	{
 		if (getCore()->getKeyboard()->getKey('k'))
 		{
-			std::cout << "Killed" << std::endl;
 			getEntity()->destroy();
 		}
 	}
@@ -23,26 +22,21 @@ struct Killer : public Component
 
 int main() {
     std::shared_ptr<Core> core = Core::initialize();
-	/*
-	* Add Cat Object
-	*/
-	std::shared_ptr<Entity> entity = core->addEntity();
-	entity->getTransform()->setPosition(glm::vec3(0, 0, 10));
-	std::shared_ptr<Player> cat = entity->addComponent<Player>();
-	std::shared_ptr<SoundSource> ss = entity->addComponent<SoundSource>(core->getResources()->load<Sound>("../resources/dixie_horn"));
-	std::shared_ptr<Killer> killer = entity->addComponent<Killer>();
+	
+	std::shared_ptr<Entity> cat = core->addEntity();
+	cat->getTransform()->setPosition(glm::vec3(0, 0, 10));
+	cat->addComponent<Cat>();
+	cat->addComponent<SoundSource>(core->getResources()->load<Sound>("../resources/dixie_horn"));
+	cat->addComponent<Killer>();
 
-	std::shared_ptr<Entity> re = core->addEntity();
-	re->getTransform()->setPosition(glm::vec3(0, -5, -10));
-	std::shared_ptr<Room> room = re->addComponent<Room>();
-	std::shared_ptr<Killer> rkiller = re->addComponent<Killer>();
+	std::shared_ptr<Entity> room = core->addEntity();
+	room->getTransform()->setPosition(glm::vec3(0, -5, -10));
+	room->addComponent<Room>();
 
-	std::shared_ptr<Entity> cameraEntity = core->addEntity();
-	cameraEntity->addComponent<Camera>();
-	cameraEntity->addComponent<CameraController>();
-	cameraEntity->addComponent<Listener>();
-	//std::shared_ptr<Camera> camera = cameraEntity->addComponent<Camera>();
-	//std::shared_ptr<CameraController> cameraController = cameraEntity->addComponent<CameraController>();
+	std::shared_ptr<Entity> camera = core->addEntity();
+	camera->addComponent<Camera>();
+	camera->addComponent<CameraController>();
+	camera->addComponent<Listener>();
 
 	core->start();
 

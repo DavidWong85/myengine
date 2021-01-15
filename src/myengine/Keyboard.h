@@ -10,6 +10,9 @@ namespace myengine
 {
 	struct Keyboard
 	{
+		/**
+		* return true if the specified key are being input
+		*/
 		bool getKey(int key);
 
 	private:

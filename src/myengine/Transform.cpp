@@ -1,7 +1,6 @@
 #include "Transform.h"
 #include <iostream>
 
-#include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
 namespace myengine
@@ -37,7 +36,7 @@ namespace myengine
 		
 		glm::vec4 fwd = rtn * glm::vec4(x, y, z, 1);
 
-		position = glm::vec3(fwd);
+		position += glm::vec3(fwd);
 	}
 
 	glm::vec3 Transform::getPosition()

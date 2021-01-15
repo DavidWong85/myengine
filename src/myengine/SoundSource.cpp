@@ -24,23 +24,18 @@ namespace myengine
 	{
 		ALint state = 0;
 
-		setPosition(getEntity()->getTransform()->getPosition());
+		position = getEntity()->getTransform()->getPosition();
 
 		alGetSourcei(sid, AL_SOURCE_STATE, &state);
 
 		if (state == AL_STOPPED)
 		{
-			//destroy();
+			destroy();
 		}
 	}
 
 	void SoundSource::onDestroy()
 	{
 		alDeleteSources(1, &sid);
-	}
-
-	void SoundSource::setPosition(glm::vec3 _position)
-	{
-		position = _position;
 	}
 }

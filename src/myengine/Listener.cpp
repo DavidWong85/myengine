@@ -6,17 +6,13 @@
 #include "Entity.h"
 #include "Transform.h"
 
-#include <iostream>
-
+#include <glm/ext.hpp>
 
 namespace myengine
 {
 	void Listener::onInitialize()
 	{
-		//alGenSources(1, &sid);
 		position = getEntity()->getTransform()->getPosition();
-		angle = getCore()->getCamera()->getAngle();
-		rotation = getCore()->getCamera()->getRotation();
 		alListener3f(AL_POSITION, position.x, position.y, position.z);
 	}
 
@@ -36,15 +32,5 @@ namespace myengine
 		alListener3f(AL_POSITION, position.x, position.y, position.z);
 		float vals[6] = { foward.x , foward.y , foward.z, up.x, up.y, up.z };
 		alListenerfv(AL_ORIENTATION, vals);
-	}
-
-	void Listener::setAngle(float _angle)
-	{
-		angle = _angle;
-	}
-
-	void Listener::setRotation(float _rotation)
-	{
-
 	}
 }

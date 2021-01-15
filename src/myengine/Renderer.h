@@ -12,9 +12,26 @@ namespace myengine
 
 	struct Renderer : public Component
 	{
+		/*
+		* Initialize with build-in shader
+		*/
 		void onInitialize();
+		/*
+		* Render model
+		*/
 		void onRender();
+		/*
+		* Set custom shader
+		* read from external files
+		*/
+		void setShader(std::string vertexPath, std::string fragmentPath);
+		/*
+		* set model
+		*/
 		void setModel(std::shared_ptr<Model> model);
+		/*
+		* set texture
+		*/
 		void setTexture(std::shared_ptr<Texture> texture);
 
 	private:

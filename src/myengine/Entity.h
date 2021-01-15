@@ -58,12 +58,25 @@ namespace myengine
 			}
 			throw Exception("Entity does not contain requested type");
 		}
-
+		/*
+		* call all component's tick() 
+		*/
 		void tick();
+		/*
+		* call all component's render()
+		*/
 		void render();
+		/* 
+		* set flag to false and call all component's destroy()
+		*/
 		void destroy();
-
+		/*
+		* get share pointer to core
+		*/
 		std::shared_ptr<Core> getCore();
+		/*
+		* get share pointer to transform component
+		*/
 		std::shared_ptr<Transform> getTransform();
 
 	private:

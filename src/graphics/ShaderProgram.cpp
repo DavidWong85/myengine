@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <myengine/Exception.h>
+#include <exception>
 
 namespace graphics
 {
@@ -21,14 +22,15 @@ namespace graphics
 			"varying vec2 v_TexCoord;                                               \n " \
 			"varying vec3 v_Normal;                                                 \n " \
 			"varying vec3 v_viewPos;                                                \n " \
+			"varying vec3 v_FragPos;                                                \n " \
 			"                                                                       \n " \
 			"void main()                                                            \n " \
 			"{                                                                      \n " \
 			"gl_Position = u_Projection * u_View * u_Model * vec4(a_Position, 1.0); \n " \
-			"v_viewPos = gl_Position;                                               \n " \
+			"v_viewPos = vec3(gl_Position);                                         \n " \
 			"v_TexCoord = a_TexCoord;                                               \n " \
 			"v_Normal = a_Normal;                                                   \n " \
-			"vec3 v_FragPos = vec3(u_Model * vec4(a_Position, 1.0));                \n " \
+			"v_FragPos = vec3(u_Model * vec4(a_Position, 1.0));                     \n " \
 			"}                                                                      \n ";
 
 		GLuint vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
@@ -53,6 +55,10 @@ namespace graphics
 		}
 
 		const GLchar* fragmentShaderSrc =
+			"#ifdef GL_ES                                               \n" \
+			"precision mediump float;                                   \n" \
+			"#endif                                                     \n" \
+			"                                                           \n" \
 			"uniform sampler2D u_Texture;                               \n" \
 			"                                                           \n" \
 			"uniform float ambientStrength;                             \n" \
@@ -77,20 +83,20 @@ namespace graphics
 			"                                                           \n" \
 			"vec3 viewDir = normalize(v_viewPos - v_FragPos);           \n" \
 			"vec3 reflectDir = reflect(-lightDir, norm);                \n" \
-			"float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32);  \n" \
+			"float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0);\n" \
 			"vec3 specular = specularStrength * spec * lightColor;      \n" \
 			"                                                           \n" \
-			"vec3 Maxv3 = (1, 1, 1);                                    \n" \
-			"vec3 Minv3 = (0, 0, 0);                                    \n" \
-			"vec3 light = (ambient + diffuse + specular);               \n" \
+			"vec3 Maxv3 = vec3(1, 1, 1);                                \n" \
+			"vec3 Minv3 = vec3(0, 0, 0);                                \n" \
+			"vec3 light = vec3(ambient + diffuse + specular);           \n" \
 			"light = max(min(light, Maxv3), Minv3);                     \n" \
 			"                                                           \n" \
 			"vec4 tex = texture2D(u_Texture, v_TexCoord);               \n" \
 			"                                                           \n" \
-			"gl_FragColor = tex;                     \n" \
+			"gl_FragColor = tex;                                        \n" \
 			"}                                                          \n";
 
-		// line 90 - > vec4(light, 1.0)*
+		// line 92 - > * vec4(light, 1.0)*
 		GLuint fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
 		glShaderSource(fragmentShaderId, 1, &fragmentShaderSrc, NULL);
 		glCompileShader(fragmentShaderId);
@@ -179,6 +185,10 @@ namespace graphics
 		}
 
 		const GLchar* fragmentShaderUISrc =
+			"#ifdef GL_ES                                               \n" \
+			"precision mediump float;                                   \n" \
+			"#endif                                                     \n" \
+			"                                                           \n" \
 			"uniform sampler2D u_Texture;                               \n" \
 			"varying vec2 v_TexCoord;                                   \n" \
 			"                                                           \n" \
@@ -236,6 +246,7 @@ namespace graphics
 
 	ShaderProgram::ShaderProgram(std::string vertexPath, std::string fragmentPath)
 	{
+		// Vertex
 		std::ifstream file(vertexPath);
 		if (!file.is_open())
 		{
@@ -249,7 +260,26 @@ namespace graphics
 		GLuint vertexShaderId = glCreateShader(GL_VERTEX_SHADER);
 		const GLchar* tmp2 = tmp.c_str();
 		glShaderSource(vertexShaderId, 1, &tmp2, NULL);
-		// Frag
+		glCompileShader(vertexShaderId);
+		GLint success = 0;
+		glGetShaderiv(vertexShaderId, GL_COMPILE_STATUS, &success);
+
+		if (!success)
+		{
+			int length = 0;
+			glGetShaderiv(vertexShaderId, GL_INFO_LOG_LENGTH, &length);
+
+			std::vector<char> infoLog(length);
+			glGetShaderInfoLog(vertexShaderId, length, NULL, &infoLog.at(0));
+
+			glDeleteShader(vertexShaderId);
+
+			std::string msg = &infoLog.at(0);
+			std::cout << msg << std::endl;
+			throw std::exception();
+		}
+
+		// Fragment
 		file.open(fragmentPath);
 		if (!file.is_open())
 		{
@@ -263,7 +293,48 @@ namespace graphics
 		GLuint fragmentShaderId = glCreateShader(GL_FRAGMENT_SHADER);
 		tmp2 = tmp.c_str();
 		glShaderSource(fragmentShaderId, 1, &tmp2, NULL);
+		glCompileShader(fragmentShaderId);
+		glGetShaderiv(fragmentShaderId, GL_COMPILE_STATUS, &success);
+
+		if (!success)
+		{
+			int length = 0;
+			glGetShaderiv(fragmentShaderId, GL_INFO_LOG_LENGTH, &length);
+
+			std::vector<char> infoLog(length);
+			glGetShaderInfoLog(fragmentShaderId, length, NULL, &infoLog.at(0));
+
+			glDeleteShader(fragmentShaderId);
+
+			std::string msg = &infoLog.at(0);
+			std::cout << msg << std::endl;
+			throw std::exception();
+		}
+
 		// link shader
+
+		ID = glCreateProgram();
+		glAttachShader(ID, vertexShaderId);
+		glAttachShader(ID, fragmentShaderId);
+
+		glBindAttribLocation(ID, 0, "a_Position");
+		glBindAttribLocation(ID, 1, "a_TexCoord");
+		glBindAttribLocation(ID, 2, "a_Normal");
+
+		glLinkProgram(ID);
+
+		modelLoc = glGetUniformLocation(ID, "u_Model");
+		projectionLoc = glGetUniformLocation(ID, "u_Projection");
+		viewLoc = glGetUniformLocation(ID, "u_View");
+		lpLoc = glGetUniformLocation(ID, "lightPos");
+		lcLoc = glGetUniformLocation(ID, "lightColor");
+		asLoc = glGetUniformLocation(ID, "ambientStrength");
+		ssLoc = glGetUniformLocation(ID, "specularStrength");
+
+		glDetachShader(ID, vertexShaderId);
+		glDetachShader(ID, fragmentShaderId);
+		glDeleteShader(vertexShaderId);
+		glDeleteShader(fragmentShaderId);
 	}
 
 	ShaderProgram::~ShaderProgram()

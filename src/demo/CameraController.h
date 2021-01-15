@@ -2,8 +2,13 @@
 
 struct CameraController : public Component
 {
+	/**
+	* update transform's position and camera's angle and rotation
+	*/
 	void onTick();
-
+	/**
+	* Calculate move position
+	*/
 	glm::vec3 Move(float _deltaTime, float _rotation, glm::vec3 _position, glm::vec3 _direction);
 
 private:

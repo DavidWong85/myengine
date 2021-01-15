@@ -50,12 +50,14 @@ namespace myengine
 		{ 
 			throw Exception("Failed to open default device");
 		}
+
 		rtn->context = alcCreateContext(rtn->device, NULL); 
 		if (!rtn->context) 
 		{
 			alcCloseDevice(rtn->device);  
 			throw Exception("Failed to create context"); 
 		}
+
 		if (!alcMakeContextCurrent(rtn->context)) 
 		{
 			alcDestroyContext(rtn->context);  
@@ -97,14 +99,14 @@ namespace myengine
 		return mouse;
 	}
 
-	std::shared_ptr<Resources> Core::getResources()
-	{
-		return resources;
-	}
-
 	std::shared_ptr<Camera> Core::getCamera()
 	{
 		return camera.lock();
+	}
+
+	std::shared_ptr<Resources> Core::getResources()
+	{
+		return resources;
 	}
 
 	#ifdef EMSCRIPTEN
@@ -189,10 +191,6 @@ namespace myengine
 				ei--;
 			}
 		}
-
-		//For 2D UI, disable GL_DEPTH_TEST , then use another render function specific for 2D 
-
-		//std::cout << "Delta Time : " << c->deltaTime << std::endl;
 
 		SDL_GL_SwapWindow(c->window); 
 
