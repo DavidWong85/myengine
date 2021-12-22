@@ -1,0 +1,10 @@
+^E:\UNIVERSITY WORKS\3RD YEAR\GAME ENGINE PROGRAMMING\GEP\GEP\MYENGINE\BUILD\CMAKEFILES\B1D82554C557F79DF68D73210FB5B1FD\GENERATE.STAMP.RULE
+setlocal
+C:\cmake\bin\cmake.exe "-SE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine" "-BE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build/MYENGINE.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

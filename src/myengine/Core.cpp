@@ -117,7 +117,7 @@ namespace myengine
 	#else
 	void Core::start()
 	{
-		while(running)
+		while(true)
 		{
 			loop();
 		}
@@ -126,6 +126,7 @@ namespace myengine
 	
 	void Core::loop()
 	{
+		bool running = true;
 		SDL_Event e = { 0 };
 		std::shared_ptr<Core> c = _core.lock();
 
@@ -137,7 +138,7 @@ namespace myengine
 		{ 
 			if (e.type == SDL_QUIT) 
 			{
-				c->running = false;
+				running = false;
 			} 
 			else if (e.type == SDL_KEYDOWN)
 			{
@@ -164,11 +165,6 @@ namespace myengine
 			{
 				c->mouse->setMousePosition(e.motion.x, e.motion.y);
 			}
-		}
-
-		if (c->getKeyboard()->getKey(SDLK_ESCAPE))
-		{
-			c->running = false;
 		}
 
 		SDL_WarpMouseInWindow(c->window, 1280 / 2, 720 / 2);

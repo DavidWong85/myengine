@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A3B0BB1E-ABBF-3750-A7A8-73051B1BF4BD}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>myengine</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">myengine.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">myengine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">myengine.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">myengine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">myengine.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">myengine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">myengine.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">myengine</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;SDL_MAIN_HANDLED;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;SDL_MAIN_HANDLED;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;SDL_MAIN_HANDLED;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\contrib\msvc15-windows-x86_64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\cmake\bin\cmake.exe "-SE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine" "-BE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build" --check-stamp-file "E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\cmake\bin\cmake.exe "-SE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine" "-BE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build" --check-stamp-file "E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\cmake\bin\cmake.exe "-SE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine" "-BE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build" --check-stamp-file "E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\cmake\bin\cmake.exe "-SE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine" "-BE:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build" --check-stamp-file "E:/University Works/3rd Year/Game Engine Programming/GEP/GEP/myengine/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;C:\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;C:\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\3.22.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\myengine.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Core.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Entity.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Component.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Transform.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Exception.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Renderer.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Keyboard.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Mouse.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Camera.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resource.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resources.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Model.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Texture.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Sound.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\SoundSource.h" />
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Listener.h" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Core.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Entity.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Component.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Transform.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Exception.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Renderer.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Keyboard.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Mouse.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Camera.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resource.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Model.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Texture.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Sound.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\SoundSource.cpp" />
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Listener.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\ZERO_CHECK.vcxproj">
+      <Project>{FE4756CB-2029-374E-B9A0-96B99F30E299}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\build\graphics.vcxproj">
+      <Project>{34780070-52FC-30FC-8144-0992260D6BC8}</Project>
+      <Name>graphics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

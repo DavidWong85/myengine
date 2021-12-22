@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Core.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Component.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Exception.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Renderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Keyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Mouse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Sound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\SoundSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Listener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\myengine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Component.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Exception.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Renderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Sound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\SoundSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\myengine\Listener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{92CE0915-7C8F-3D39-BA8D-520EC4F4FB5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A809C0EF-4770-38E9-97CA-11D79C2DAA76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

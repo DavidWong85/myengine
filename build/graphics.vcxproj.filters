@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Light.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\ShaderProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\VertexArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\VertexBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\ShaderProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\VertexArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\src\graphics\VertexBuffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\University Works\3rd Year\Game Engine Programming\GEP\GEP\myengine\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{92CE0915-7C8F-3D39-BA8D-520EC4F4FB5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A809C0EF-4770-38E9-97CA-11D79C2DAA76}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
